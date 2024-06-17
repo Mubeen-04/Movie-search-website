@@ -1,0 +1,167 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #2b1d0f;
+    color: #fff;
+}
+
+header nav{
+    background-color: #212121;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+}
+
+header nav h1{
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+header nav form{
+    display: flex;
+    justify-content: center;
+}
+
+form input[type="text"]{
+    flex-grow: 1;
+    margin-right: 10px;
+}
+form input[type="text"],button{
+    border: none;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+form button[type="submit"]{
+    background-color: #f44336;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+form button[type="submit"]:hover, .recipe button:hover, .recipe-close-btn:hover{
+    background-color: #ff5c5c;
+}
+/* Main Section */
+/* Add your existing CSS code with minor adjustments */
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 40px;
+    width: 80%;
+    margin: 10px auto;
+    padding: 10px;
+    place-items: center;
+}
+
+.movie {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    border-radius: 6px;
+    box-shadow: 0 5px 10px rgba(78, 73, 73, 0.1), -5px -5px 10px rgba(34, 34, 34, 0.5);
+    cursor: pointer;
+    width: 350px;
+    transition: transform 0.3s ease-in-out;
+}
+.movie:hover {
+    transform: scale(1.02);
+}
+.movie img {
+    width: 100%; /* Ensure the image takes up the full width of the card */
+    height: 450px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Maintain aspect ratio and cover the area */
+}
+.movie h3 {
+    font-size: 24px;
+    margin-block: 5px;
+}
+
+.movie p {
+    font-size: 20px;
+    color: #4a4a4a;
+    margin: 5px 0;
+}
+
+.movie span {
+    font-weight: 600;
+}
+
+.movie button {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin: 18px auto;
+    background-color: #f44336;
+    color: white;
+}
+
+.movie-details {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #694c2f;
+    border-radius: 12px;
+    width: 50%;
+    height: 75%;
+    font-size: 20px;
+    transition: all 0.5s ease-in-out;
+    overflow-y: scroll;
+}
+
+/* Adjust scrollbar for movie details */
+.movie-details::-webkit-scrollbar {
+    width: 10px;
+}
+
+.movie-details::-webkit-scrollbar-thumb {
+    background: #b5b5ba;
+    border-radius: 16px;
+}
+
+.movie-details-content {
+    padding: 30px;
+}
+.movie-details-content h2, .movie-details-content h3, .movie-details-content p, .movie-details-content ul {
+    margin-bottom: 15px; /* Add margin to space out elements */
+}
+.movie-close-btn {
+    padding: 8px;
+    border-radius: 5px;
+    position: absolute;
+    border: none;
+    cursor: pointer;
+    margin: 18px 10px;
+    background-color: #f44336;
+    color: white;
+    width: 30px;
+    top: 20px;
+    right: 20px;
+}
+@media screen and (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+    }
+    header nav form {
+        width: 80%;
+        margin-top: 20px;
+    }
+}
