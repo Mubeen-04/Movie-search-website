@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #2b1d0f;
+    background-color: 	#00ffff;
     color: #fff;
 }
 
@@ -39,11 +39,13 @@ form input[type="text"],button{
     font-size: 16px;
     padding: 10px;
     border-radius: 4px;
+    font-weight: bold;
 }
 
 form button[type="submit"]{
-    background-color: #f44336;
-    color: #fff;
+    background-color: #00ff00;
+    font-weight: bolder;
+    color: #000;
     cursor: pointer;
     transition: background-color 0.2s ease-in-out;
 }
@@ -53,7 +55,6 @@ form button[type="submit"]:hover, .recipe button:hover, .recipe-close-btn:hover{
 }
 /* Main Section */
 /* Add your existing CSS code with minor adjustments */
-
 .container {
     text-align: center;
     margin-top: 20px;
@@ -66,6 +67,9 @@ form button[type="submit"]:hover, .recipe button:hover, .recipe-close-btn:hover{
     place-items: center;
 }
 
+.container h2{
+    color: #000;
+}
 .movie {
     background-color: white;
     display: flex;
